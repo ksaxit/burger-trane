@@ -14,7 +14,10 @@ header {
   background-image: linear-gradient(to bottom, orange, white);
 }
 
-
+a {
+  text-decoration: none;
+  color:black;
+}
 .logo {
   color: white;
   font-family: 'Montserrat';
@@ -93,6 +96,10 @@ header {
   font-weight: 400;
   line-height: 29px;
   letter-spacing: 0em;
+  transition: 0.5s;
+}
+button:hover {
+  transform: scale(1.2);
 }
 .menu {
   display: grid;
@@ -133,6 +140,27 @@ header {
   line-height: 24px;
   letter-spacing: 0em;
 }
+.footer-p a {
+  display: inline-block;
+  color: #000000; /* Цвет обычной ссылки */
+  line-height: 1;
+  text-decoration: none; /* Убираем подчеркивание */
+  cursor: pointer;
+}
+.footer-p a:after {
+  background-color: #ff2d03; /* Цвет линии при наведении на нее курсора мыши */
+  display: block;
+  content: "";
+  height: 2px; /* Высота линии */
+  width: 0%;
+  -webkit-transition: width .3s ease-in-out;
+  -moz--transition: width .3s ease-in-out;
+  transition: width .3s ease-in-out;
+}
+.footer-p a:hover:after,
+.footer-p a:focus:after {
+  width: 100%;
+}
 h3 {
   font-family: 'Montserrat';
   font-size: 20px;
@@ -146,7 +174,59 @@ h3 {
   margin-top: 50px;
   margin-left: 660px;
 }
+.foot-logo {
+  transition: 0.5s;
+}
+.foot-logo:hover {
+  transform: rotate(360deg);
+}
 .img-1 {
   position: relative;
   bottom: 5px;
+}
+
+.all-a {
+  text-shadow:
+  1px 1px 0 hsl(0, 0%, 5%),
+  2px 2px 0 hsl(0, 0%, 24%),
+  3px 3px 0 hsl(0, 0%, 33%),
+  4px 4px 0 hsl(0, 0%, 48%),
+  5px 5px 0 hsl(0, 0%, 64%),
+  6px 6px 0 hsl(0, 0%, 69%),
+  7px 7px 0 hsl(0, 0%, 82%),
+  8px 8px 0 hsl(0, 0%, 92%);
+  color: hsl(0, 0%, 0%);
+  transition: all 1s;
+}
+
+.all-a:hover {
+  text-shadow:
+  1px -1px 0 hsl(0, 0%, 100%),
+  2px -2px 0 hsl(300, 1%, 77%),
+  3px -3px 0 hsl(240, 0%, 61%),
+  4px -4px 0 hsl(240, 0%, 51%),
+  5px -5px 0 hsl(0, 0%, 40%),
+  6px -6px 0 hsl(0, 0%, 21%),
+  7px -7px 0 hsl(0, 0%, 13%),
+  8px -8px 0 hsl(0, 0%, 1%);
+  color: hsl(0, 0%, 100%);
+}
+
+#font {
+  transition: 0.5s;
+}
+
+#font:hover {
+  transform:translateY(-10px);
+}
+
+.butt {
+  color: white;
+}
+#hover-image-gallery a img {
+  transition: filter 0.5s linear;
+  filter: brightness(2) grayscale(1) opacity(0.5);
+}
+#hover-image-gallery a:hover img {
+  filter: none;
 }
